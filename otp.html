@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(to left,green,lightgreen);
+            font-family: Netflix sans;          
+        }
+        .otp{
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 200px;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+        }
+        .otp button{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: green;
+            color: #fff;
+        }
+        #otp{
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;    
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="otp">
+            <h3 >Your Generated Otp is:</h3>
+            <input id="otp" type="text">
+            <button onclick="gen()">OTP GRENERATE</button>
+        </div>
+    </div>
+    <script>
+        function gen() {
+         let len=6
+        let rn=Math.floor(Math.random()*Math.pow(10,len))
+        document.getElementById("otp").value=rn;
+        }
+        setInterval(()=>{
+            document.getElementById("otp").value="";
+        },5000)
+    </script>
+</body>
+</html>
