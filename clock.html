@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="cl"></div>
+    <script>
+        function time() {
+          let date = new Date();
+          let h = date.getHours();
+          let m = date.getMinutes();
+          let s = date.getSeconds();
+        //   let clc = h + ":" + m + ":" + s;
+        if(h<10)
+        {
+            h= "0"+h;
+        }
+        if(m<10)
+        {
+            m= "0"+m;
+        }
+        if(s<10)
+        {
+            s= "0"+s;
+        }
+        document.getElementById("cl").innerHTML="current Time="+h+":"+m+":"+s
+        }
+        setInterval(time, 1000);
+      </script>
+  </body>
+</html>
