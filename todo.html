@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>To do list</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: netfix sans-serif;
+        }
+        body{
+            background: linear-gradient(to right,lightgray,black);
+        }
+        .todo{
+            width: 300px;
+            height: 400px;
+            border: none ;
+            border-radius: 10px;
+            background-color: #9d9999f3;
+            margin: auto;
+            margin-top: 150px;
+            padding: 20px;
+            backdrop-filter: blur(20px);
+        }
+        .todo input{
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            width: 70%;
+        }
+        .todo button{
+            padding: 10px;
+            background-color:rgb(19, 239, 19);
+            border-radius: 10px;
+            color: #ffff;
+            border: none;
+            margin-left:10px;
+            width: 50px;
+        }
+        .container h1{
+            text-align: center;
+            color: #ffff;
+            text-decoration: underline;
+           
+        }
+        .list{
+            font-size: 24px;
+            margin-top: 10px;
+        }
+        .list li{
+            list-style: none;
+            position: relative;
+            padding: 10px;
+        }
+        .list li i{
+            position: absolute;
+            right: 10px;
+        }
+        .done{
+            text-decoration: line-through;
+            background-color: lightgray;
+            color: #000;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="todo">
+            <input id="input" type="text" placeholder="Add What you want to do">
+            <button onclick="add()">Add</button>
+           <div class="list" id="li">
+            <!-- <li>project<i class="fa-solid fa-xmark" id="close"></i></li> -->
+           </div>
+        </div>
+    </div>
+   <script src="todo.js"></script>
+</body>
+</html>
