@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        
+    </style>
 </head>
 <body>
+    <div class="main">
     <div id="counter">0</div>
     <button id="Decrease">Decrease</button>
     <button id="reset">Reset</button>
-    <button>Increase</button>
+    <button id="Increase">Increase</button>
+    </div>
 </body>
 <script>
     let count=0
@@ -23,6 +28,10 @@
         count=0
         document.getElementById("counter").innerHTML=count;
     })
-
+    let inc=document.getElementById("Increase")
+    inc.addEventListener('click',function(){
+        count+=1
+        document.getElementById("counter").innerHTML=count;
+    })
 </script>
 </html>
