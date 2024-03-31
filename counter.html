@@ -7,8 +7,22 @@
 </head>
 <body>
     <div id="counter">0</div>
-    <button>Decrease</button>
-    <button>Reset</button>
+    <button id="Decrease">Decrease</button>
+    <button id="reset">Reset</button>
     <button>Increase</button>
 </body>
+<script>
+    let count=0
+    let dec=document.getElementById("Decrease")
+    dec.addEventListener('click',function(){
+        count-=1
+        document.getElementById("counter").innerHTML=count;
+    })
+    let res=document.getElementById("reset")
+    res.addEventListener('click',function(){
+        count=0
+        document.getElementById("counter").innerHTML=count;
+    })
+
+</script>
 </html>
