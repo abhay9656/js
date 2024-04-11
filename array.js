@@ -2,9 +2,13 @@
 
 let str="hello in learning javaScript"
 
-let arrStr=Array.from(str)
+function rev(){
+    return str.split("").reverse().join("")
+}
+console.log(rev());
+// let arrStr=Array.from(str)
 
-arrStr.forEach((value)=>{
-     console.log(value.toUpperCase());
-})
+// arrStr.forEach((value)=>{
+//      console.log(value.toUpperCase());
+// })
 
